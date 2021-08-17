@@ -1,0 +1,22 @@
+-- Mencari angka di balik kartu --
+
+APPROACH #1 : Mengecek kartu dari pojok kiri secara bertahap ke kanan. || O(n)
+
+1 for i dari 0 ke n - 1
+2	If angka di balik i kartu
+3		Cetak i 
+4		Return true
+5 Return false
+6 Quit
+
+APPROACH #2 : Mengecek langsung dari tengah , lalu mengecek lagi dari tengah pada bagian kanan
+selanjutnya mengecek lagi dari tengah pada bagian kiri || O(log2n) 
+
+1 If angka di balik kartu bagian tengah
+2	Return true
+3 Else if angka tidak ada di balik kartu bagian tengah
+4	Cari kartu bagian tengah pada sisi kiri
+5 Else if angka tidak ada di balik kartu bagian kiri
+6	Cari kartu bagian tengah pada sisi kanan
+7 Else 
+8	Quit
